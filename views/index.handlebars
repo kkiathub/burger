@@ -1,33 +1,31 @@
-<h1>Burgers!</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-5 left-side">
+      {{#each burgers}}
+      {{#unless devoured}}
+      <h6>🍔{{name}}<button class="btn-devour" data-id="{{id}}">Devour it!</button></h6>
+      {{/unless}}
+      {{/each}}
+    </div>
+    <div class="col-3">
+      <img src="assets/img/burger.png" alt="burger">
+      <form class="create-form">
 
-<h2>Burgers that are ready to eat!</h2>
+        <div class="form-group">
+          <label for="burger-id">Enter your burger</label>
+          <input type="text" id="burger-id" name="name">
+        </div>
 
-<ul>
-  {{#each burgers}}
-  {{#unless devoured}}
-  <li>{{name}}</li>
-  {{/unless}}
-  {{/each}}
-</ul>
+        <button type="submit">Add Burger</button>
+      </form>
+    </div>
+    <div class="col-4 right-side">
 
-<h2>Burgers that are devoured!</h2>
-
-<ul>
-  {{#each cats}}
-  {{#if devoured}}
-  <li>{{name}}</li>
-  {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burger-id">Burger:</label>
-    <input type="text" id="burger-id" name="name">
+      {{#each burgers}}
+      {{#if devoured}}
+      <h6>😋{{name}}</h6>
+      {{/if}}
+      {{/each}}
+    </div>
   </div>
-
-
-  <button type="submit">Add Burger</button>
-</form>
+</div>
