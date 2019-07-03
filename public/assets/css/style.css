@@ -26,20 +26,18 @@ body {
   padding: 10px 12px;
 }
 
-li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+.btn-devour {
+  background-color : green;
+  border-radius: 5px;
+  color: white;
+}
+.create-form button {
+  background-color: yellow;
+  border-radius: 5px;
 }
 
-.label {
+.form-group label {
   font-weight: bold;
-}
-
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
 }
 
 .form-group {
